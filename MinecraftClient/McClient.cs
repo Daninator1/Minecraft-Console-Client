@@ -478,7 +478,7 @@ namespace MinecraftClient
         /// <summary>
         /// When connection has been lost, login was denied or played was kicked from the server
         /// </summary>
-        public void OnConnectionLost(ChatBot.DisconnectReason reason, string message)
+        public virtual void OnConnectionLost(ChatBot.DisconnectReason reason, string message)
         {
             ConsoleIO.CancelAutocomplete();
 
@@ -2417,7 +2417,7 @@ namespace MinecraftClient
         /// <summary>
         /// Called when a server was successfully joined
         /// </summary>
-        public void OnGameJoined(bool isOnlineMode)
+        public virtual void OnGameJoined(bool isOnlineMode)
         {
             if (protocolversion < Protocol18Handler.MC_1_19_3_Version || playerKeyPair == null || !isOnlineMode)
                 SetCanSendMessage(true);
