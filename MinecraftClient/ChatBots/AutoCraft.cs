@@ -453,7 +453,7 @@ namespace MinecraftClient.ChatBots
         /// Prepare the crafting action steps by the given recipe name and start crafting
         /// </summary>
         /// <param name="recipe">Name of the recipe to craft</param>
-        private void PrepareCrafting(RecipeConfig recipeConfig)
+        private void PrepareCrafting(Configs.RecipeConfig recipeConfig)
         {
             Dictionary<int, ItemType> materials = new();
             for (int i = 0; i < recipeConfig.Slots.Length; ++i)

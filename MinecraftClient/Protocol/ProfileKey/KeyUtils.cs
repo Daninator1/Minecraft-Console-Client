@@ -8,7 +8,7 @@ using static MinecraftClient.Protocol.Message.LastSeenMessageList;
 
 namespace MinecraftClient.Protocol.ProfileKey
 {
-    static class KeyUtils
+    public static class KeyUtils
     {
         private static readonly SHA256 sha256Hash = SHA256.Create();
 
